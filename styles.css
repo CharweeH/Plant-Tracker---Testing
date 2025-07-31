@@ -1,0 +1,125 @@
+/* Custom styles for Plant Tracker */
+
+body {
+    background-color: #f8f9fa;
+}
+
+/* Autocomplete Suggestions */
+.suggestions {
+    position: absolute;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-radius: 0 0 0.375rem 0.375rem;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+}
+
+.suggestion-item {
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.suggestion-item:hover {
+    background-color: #e9ecef;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+/* Plant Cards */
+.plant-card {
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+.plant-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Plant Notes Styling */
+.plant-notes {
+    font-size: 0.875rem;
+    color: #6c757d;
+    font-style: italic;
+    margin-top: 0.25rem;
+}
+
+/* Empty State Styling */
+.empty-state {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: #6c757d;
+}
+
+.empty-state h5 {
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+/* Button Group Responsive */
+@media (max-width: 576px) {
+    .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+    
+    .btn-group .btn {
+        flex: 1;
+        min-width: 0;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+/* Modal Enhancements */
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Focus states for better accessibility */
+.form-control:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Plant list responsive design */
+@media (max-width: 768px) {
+    .plant-info {
+        margin-bottom: 1rem;
+    }
+    
+    .btn-group {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Custom scrollbar for suggestions */
+.suggestions::-webkit-scrollbar {
+    width: 6px;
+}
+
+.suggestions::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.suggestions::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.suggestions::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
